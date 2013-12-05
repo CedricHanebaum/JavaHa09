@@ -17,6 +17,23 @@ public abstract class Zahlenwort {
 	
 	public abstract String getSprache();
 	
+	public static int getDigitAt(int x, int i) {
+		String tmp = String.valueOf(x);
+		while(tmp.length() < 4){
+			tmp = "0" + tmp;
+		}
+		if(i == 1000){
+			return Integer.parseInt("" + tmp.charAt(0));
+		}
+		if(i == 100){
+			return Integer.parseInt("" + tmp.charAt(1));
+		}
+		if(i == 10){
+			return Integer.parseInt("" + tmp.charAt(2));
+		}
+		return Integer.parseInt("" + tmp.charAt(3));
+	}
+	
 	public String toString(){
 		return "Die Zahl " + x + " schreibt man auf " + getSprache() + ":" + getWortString() + ".";
 	}
