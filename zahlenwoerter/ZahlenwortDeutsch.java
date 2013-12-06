@@ -4,6 +4,7 @@ public class ZahlenwortDeutsch extends Zahlenwort {
 
 	private String[] einer = { "", "ein", "zwei", "drei", "vier", "fuenf", "sechs", "sieben", "acht", "neun" };
 	private String[] zehner = { "", "zehn", "zwanzig", "dreissig", "vierzig", "fuenfzig", "sechzig", "siebzig", "achtzig", "neunzig" };
+	private String[] zehnBisNeunzehn = {"zehn", "elf", "zwoelf", "dreizehn", "vierzehn", "fuenfzehn", "sechszehn", "siebzehn", "achtzehn", "neunzehn"};
 	private String hundert = "hundert";
 	private String tausend = "tausend";
 	private String und = "und";
@@ -26,16 +27,7 @@ public class ZahlenwortDeutsch extends Zahlenwort {
 		}
 		if (Zahlenwort.getDigitAt(x, 10) != 0) {
 			if (Zahlenwort.getDigitAt(x, 10) == 1) {
-				if (Zahlenwort.getDigitAt(x, 1) == 0) ret += "zehn";
-				if (Zahlenwort.getDigitAt(x, 1) == 1) ret += "elf";
-				if (Zahlenwort.getDigitAt(x, 1) == 2) ret += "zwoelf";
-				if (Zahlenwort.getDigitAt(x, 1) == 3) ret += "dreizehn";
-				if (Zahlenwort.getDigitAt(x, 1) == 4) ret += "vierzehn";
-				if (Zahlenwort.getDigitAt(x, 1) == 5) ret += "fuenfzehn";
-				if (Zahlenwort.getDigitAt(x, 1) == 6) ret += "sechzehn";
-				if (Zahlenwort.getDigitAt(x, 1) == 7) ret += "siebzehn";
-				if (Zahlenwort.getDigitAt(x, 1) == 8) ret += "achtzehn";
-				if (Zahlenwort.getDigitAt(x, 1) == 9) ret += "neunzehn";
+				ret += zehnBisNeunzehn[Zahlenwort.getDigitAt(x, 1)];
 			} else {
 				if(Zahlenwort.getDigitAt(x, 1) != 0) ret += und;
 				ret += zehner[Zahlenwort.getDigitAt(x, 10)];
