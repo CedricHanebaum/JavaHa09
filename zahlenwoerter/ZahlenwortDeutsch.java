@@ -12,7 +12,7 @@ public class ZahlenwortDeutsch extends Zahlenwort {
 	public ZahlenwortDeutsch(int x) {
 		super(x);
 	}
-
+	
 	@Override
 	public String getWortString() {
 		String ret = "";

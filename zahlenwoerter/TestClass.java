@@ -8,12 +8,14 @@ public class TestClass {
 		
 		for(int i: testDeutsch){
 			ZahlenwortDeutsch deutsch = new ZahlenwortDeutsch(i);
-			System.out.println(deutsch.getWortString());	
+			System.out.println(deutsch);	
 		}
+		
+		System.out.println();
 		
 		for(int i: testEnglish){
 			ZahlenwortEnglisch english = new ZahlenwortEnglisch(i);
-			System.out.println(english.getWortString());	
+			System.out.println(english);	
 		}
 	}
 
